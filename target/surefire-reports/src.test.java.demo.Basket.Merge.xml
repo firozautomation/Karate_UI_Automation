@@ -1,0 +1,113 @@
+<testsuite failures="1" name="src/test/java/demo/Basket/Merge.feature" skipped="0" tests="1" time="0.435695">
+  <testcase classname="src.test.java.demo.Basket.Merge" name="Proceed as Guest" time="0.435695">
+    <failure message="-unknown-:10 - java function call failed: could not find or read file: locators.json">* configure driver = { type: 'chrome', showDriverLog: true } .............. passed
+* call read 'locators.json' ............................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: -unknown-:10 - java function call failed: could not find or read file: locators.json&#13;
+	at ✽.* call read 'locators.json' (-unknown-:10)&#13;
+
+Given driver 'https://webordering-sp-dev.qubeyond.com/362/login' .......... skipped
+And driver.dimensions = { x: 0, y: 0, width: 1600, height: 1200 } ......... skipped
+And waitForUrl('https://webordering-sp-dev.qubeyond.com/362/login') ....... skipped
+When click(loginScreen.buttons.continueAsGuest) ........................... skipped
+Then waitForUrl('https://webordering-sp-dev.qubeyond.com/362/search-locations') . skipped
+And delay(3000) ........................................................... skipped
+And input("input[id=location]", 'East West Highway, Bethesda, MD, USA') ... skipped
+And delay(20000) .......................................................... skipped
+When click(locationSearchScreen.fields.selectedItem) ...................... skipped
+And delay(10000) .......................................................... skipped
+When click(loginScreen.buttons.search) .................................... skipped
+And delay(8000) ........................................................... skipped
+When click(locationSearchScreen.fields.selectedStore) ..................... skipped
+And delay(5000) ........................................................... skipped
+Then waitForUrl('https://webordering-sp-dev.qubeyond.com/362/menu-category') . skipped
+And delay(3000) ........................................................... skipped
+When click("//*[@id='contentStarting-5']/div/div[1]") ..................... skipped
+Then click("//div[@role='menuitem']") ..................................... skipped
+And delay(2000) ........................................................... skipped
+And click("//*[@id='custom-footer']/ion-grid/ion-row/ion-col[2]/div/ion-row/ion-col[2]/div/button[2]") . skipped
+And delay(5000) ........................................................... skipped
+And click("/html/body/app-root/ion-app/ion-router-outlet/app-app-layout/ion-content/div/app-header/div[2]/div[1]/ion-grid/ion-row/ion-col[2]/div/div[2]/span") . skipped
+And delay(3000) ........................................................... skipped
+And screenshot() .......................................................... skipped
+When click("/html/body/app-root/ion-app/ion-router-outlet/app-app-layout/ion-content/div/app-side-menu/div/div/div[2]/div/ion-row/ion-col/div/table/tr/td[1]/button[2]") . skipped
+And delay(30000) .......................................................... skipped
+* scroll("//div[@class='review-order-buttons']/button[2]") ................ skipped
+Given url 'https://auth-stg.qubeyond.com/api/v3.5/token' .................. skipped
+And request {userName: 'DBAdmin',password: 'DBAdmin1234!'} ................ skipped
+When method POST .......................................................... skipped
+Then status 200 ........................................................... skipped
+* def authToken = response.token .......................................... skipped
+* print "Access Token: " + authToken ...................................... skipped
+* def authorizationHeader =  'Bearer ' + authToken ........................ skipped
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/order-channels' ........ skipped
+And header Authorization = authorizationHeader ............................ skipped
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/order-types' ........... skipped
+And header Authorization = authorizationHeader ............................ skipped
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped
+* def orderDateTimeFn = ................................................... skipped
+* def orderDateTime = call orderDateTimeFn {} ............................. skipped
+* print "OrderDateTime: " + orderDateTime ................................. skipped
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/basket' ................ skipped
+And header Authorization = authorizationHeader ............................ skipped
+And request {"orderChannelId": 314, "orderTypeId": 234, "locationId": 260, "orderDateTime": #(orderDateTime)} . skipped
+When method POST .......................................................... skipped
+Then status 200 ........................................................... skipped
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/basket/items' .......... skipped
+And header Authorization = authorizationHeader ............................ skipped
+And request {"IsFavorite":false,"menuItemPath":"9869-12062-12063","FavoriteTag":"","note":"","quantity":1,"basketItems":[],"portionId":184} . skipped
+When method POST .......................................................... skipped
+Then status 200 ........................................................... skipped
+And def basketResponse = response ......................................... skipped
+And print 'BasketResponse:' +basketResponse ............................... skipped
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/basket' ................ skipped
+And header Authorization = authorizationHeader ............................ skipped
+And param orderChannelId = '314' .......................................... skipped
+And param orderTypeId = '234' ............................................. skipped
+And param locationId = '260' .............................................. skipped
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped
+* print "STARTS" .......................................................... skipped
+* print "Amount Due: "+response.amountDue ................................. skipped
+* print "Tips Total: "+response.tipsTotal ................................. skipped
+* print "Tax: " +response.taxesTotal ...................................... skipped
+* def baseAmount = (1 * response.amountDue) - (1 * response.taxesTotal) ... skipped
+* print "Base amount: "+baseAmount ........................................ skipped
+* def expSubTot = +baseAmount ............................................. skipped
+* def actSubTot = text("//app-review-order-details[@class='ng-star-inserted']/div/div/div[2]/div[3]/ion-grid/ion-row[1]/ion-col[2]/p").trim() . skipped
+* def ST = actSubTot.replaceAll("\\$","") ................................. skipped
+* def subTot = ST | 0 ..................................................... skipped
+* print subTot ............................................................ skipped
+And match subTot == expSubTot ............................................. skipped
+And delay(20000) .......................................................... skipped
+* def expTax = +response.taxesTotal ....................................... skipped
+* def actTax = text("//app-review-order-details[@class='ng-star-inserted']/div/div/div[2]/div[3]/ion-grid/ion-row[3]/ion-col[2]/p").trim() . skipped
+* def TX = actTax.replaceAll("\\$","") .................................... skipped
+And match TX == expTax .................................................... skipped
+And delay(20000) .......................................................... skipped
+* def expOrderTot = +response.amountDue ................................... skipped
+* def actOT = text("//app-review-order-details[@class='ng-star-inserted']/div/div/div[2]/div[3]/ion-grid/ion-row[4]/ion-col[2]/p").trim() . skipped
+* def OT = actOT.replaceAll("\\$","") ..................................... skipped
+And match OT == expOrderTot ............................................... skipped
+And delay(10000) .......................................................... skipped
+When click("//div[@class='review-order-buttons']/button[2]") .............. skipped
+And delay(10000) .......................................................... skipped
+Then waitForUrl('https://webordering-sp-dev.qubeyond.com/362/make-payment-screen') . skipped
+* click("//app-make-payment-screen/div/div/div[2]/div[1]/ion-grid/div[2]/ion-row[1]/ion-col[1]/fieldset/div/label/div/div/span[2]") . skipped
+And delay(10000) .......................................................... skipped
+* scroll("//button[contains(text(),'Pay Now')]") .......................... skipped
+And input("//input[@id='firstname']",'satikant') .......................... skipped
+And input("//input[@id='lastname']", 'Pradhan') ........................... skipped
+And input("//input[@id='mobNum']", '9937927953') .......................... skipped
+And input("//input[@id='email']", 'satish@mailinator.com') ................ skipped
+And delay(10000) .......................................................... skipped
+And click("//button[contains(text(),'Pay Now')]") ......................... skipped
+And delay(20000) .......................................................... skipped
+Then waitForUrl('https://webordering-sp-dev.qubeyond.com/362/order-confirmation') . skipped
+And delay(20000) .......................................................... skipped</failure>
+  </testcase>
+</testsuite>

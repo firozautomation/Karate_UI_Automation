@@ -1,0 +1,2969 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports  - Feature: src/test/java/demo/Basket/ExpressHosted.feature</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Thu May 07 13:02:52 IST 2020</td>
+            <td>07 May 2020, 13:02</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Feature Report</h2>
+      </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table class="stats-table">
+
+        
+<thead>
+  <tr class="header dont-sort">
+        <th></th>
+    <th colspan="6">Steps</th>
+    <th colspan="3">Scenarios</th>
+    <th colspan="2">Features</th>
+  </tr>
+  <tr>
+    <th>Feature</th>
+        <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="skipped">Skipped</th>
+    <th class="pending">Pending</th>
+    <th class="undefined">Undefined</th>
+    <th class="total">Total</th>
+
+    <th class="passed">Passed</th>
+    <th class="failed">Failed</th>
+    <th class="total">Total</th>
+
+    <th>Duration</th>
+    <th>Status</th>
+  </tr>
+</thead>
+
+
+        <tbody>
+        <tr>
+          <td class="tagname">src/test/java/demo/Basket/ExpressHosted.feature</td>
+                    <td      class="passed"    >5</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >112</td>
+          <td >0</td>
+          <td >0</td>
+          <td class="total">118</td>
+
+          <td >0</td>
+          <td  class="failed"    >1</td>
+          <td class="total">1</td>
+
+          <td class="duration" data-value="12707023900">12s 707ms</td>
+          <td class="failed">Failed</td>
+        </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="feature">
+        
+<div class="tags indention">
+  </div>
+
+        
+<div class="brief failed">
+  <span class="keyword indention">Feature</span>
+  <span class="name">src/test/java/demo/Basket/ExpressHosted.feature</span>
+  
+
+  </div>
+
+        <div class="description indention">Merge</div>
+
+        <div class="elements inner-level">
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+  </div>
+
+  
+  <span class="lead-duration duration">144ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    
+<div class="brief passed">
+  <span class="keyword indention">Background</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-1" class="collapse collapsable-details ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+    
+<div class="brief passed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-2" class="inner-level collapse collapsable-details ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">configure driver = { type: 'chrome', showDriverLog: true }</span>
+  
+  <span class="lead-duration duration">065ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-3">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details">
+        <pre>13:02:39.903 skipping bootstrap configuration: could not find or read file: classpath:karate-config.js</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">call read ('../Jsonfiles/BasketDatas.json')</span>
+  
+  <span class="lead-duration duration">072ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">*</span>
+  <span class="name">call read ('../Jsonfiles/BasketLocators.json')</span>
+  
+  <span class="lead-duration duration">006ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                      
+<div class="element">
+  
+  
+<div class="tags indention">
+      <b>Tags:</b>
+           <a href="report-tag_ResponseData.html">@ResponseData</a>
+      </div>
+
+  
+  <span class="lead-duration duration">12s 562ms</span>
+
+
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-4">
+    
+<div class="brief failed">
+  <span class="keyword indention">Scenario</span>
+  <span class="name">Proceed as Guest</span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </span>
+  <div class="description indention"></div>
+
+  <div id="element-4" class="collapse collapsable-details  in ">
+    
+
+
+    
+<div class="steps inner-level">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-5">
+    
+<div class="brief failed">
+  <span class="keyword indention">Steps</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+  </div>
+
+  <div id="steps-5" class="inner-level collapse collapsable-details  in ">
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">Given</span>
+  <span class="name">driver 'https://webordering-sp-stg.qubeyond.com/364/login'</span>
+  
+  <span class="lead-duration duration">9s 354ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-6">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-6" class="collapse collapsable-details">
+        <pre>13:02:43.928 request:
+1 &gt; GET http://localhost:9222/json
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Connection: Keep-Alive
+1 &gt; Host: localhost:9222
+1 &gt; User-Agent: Apache-HttpClient/4.5.11 (Java/1.8.0_241)
+
+13:02:44.050 response time in milliseconds: 1.84
+1 &lt; 200
+1 &lt; Content-Length: 2182
+1 &lt; Content-Type: application/json; charset=UTF-8
+[ {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:9222/devtools/page/2D71105024037D5D02B07734435FC6A5&quot;,
+   &quot;id&quot;: &quot;2D71105024037D5D02B07734435FC6A5&quot;,
+   &quot;title&quot;: &quot;CryptoTokenExtension&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://kmendfapggjehodndflmmgagdbamhnfd/_generated_background_page.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:9222/devtools/page/2D71105024037D5D02B07734435FC6A5&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:9222/devtools/page/7EF2AC4E076B1949DB8EF943443B4F50&quot;,
+   &quot;id&quot;: &quot;7EF2AC4E076B1949DB8EF943443B4F50&quot;,
+   &quot;title&quot;: &quot;Google Network Speech&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://neajdppkdcdipfabeoofebfddakdcjhd/_generated_background_page.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:9222/devtools/page/7EF2AC4E076B1949DB8EF943443B4F50&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:9222/devtools/page/9DED6B751075CAD6BDDD98149CA2C4D4&quot;,
+   &quot;id&quot;: &quot;9DED6B751075CAD6BDDD98149CA2C4D4&quot;,
+   &quot;title&quot;: &quot;Feedback&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://gfdkimpbcpahaombhbimeihdjnejgicl/_generated_background_page.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:9222/devtools/page/9DED6B751075CAD6BDDD98149CA2C4D4&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:9222/devtools/page/714DD50FCB6F61193B3BF047B140A65A&quot;,
+   &quot;id&quot;: &quot;714DD50FCB6F61193B3BF047B140A65A&quot;,
+   &quot;title&quot;: &quot;Google Hangouts&quot;,
+   &quot;type&quot;: &quot;background_page&quot;,
+   &quot;url&quot;: &quot;chrome-extension://nkeimhogjdpnpccoofpliimaahmaaome/background.html&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:9222/devtools/page/714DD50FCB6F61193B3BF047B140A65A&quot;
+}, {
+   &quot;description&quot;: &quot;&quot;,
+   &quot;devtoolsFrontendUrl&quot;: &quot;/devtools/inspector.html?ws=localhost:9222/devtools/page/C0CAC65DB899A56F8F8841BD729BAEA8&quot;,
+   &quot;id&quot;: &quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;,
+   &quot;title&quot;: &quot;Welcome to Chrome&quot;,
+   &quot;type&quot;: &quot;page&quot;,
+   &quot;url&quot;: &quot;chrome://welcome/&quot;,
+   &quot;webSocketDebuggerUrl&quot;: &quot;ws://localhost:9222/devtools/page/C0CAC65DB899A56F8F8841BD729BAEA8&quot;
+} ]
+
+
+13:02:44.075 root frame id: C0CAC65DB899A56F8F8841BD729BAEA8
+13:02:45.980 &gt;&gt; {&quot;method&quot;:&quot;Target.activateTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;},&quot;id&quot;:1}
+13:02:46.024 &lt;&lt; {&quot;id&quot;:1,&quot;result&quot;:{}}
+13:02:46.026 &gt;&gt; {&quot;method&quot;:&quot;Page.enable&quot;,&quot;id&quot;:2}
+13:02:46.029 &lt;&lt; {&quot;id&quot;:2,&quot;result&quot;:{}}
+13:02:46.030 &gt;&gt; {&quot;method&quot;:&quot;Runtime.enable&quot;,&quot;id&quot;:3}
+13:02:46.045 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;chrome://welcome&quot;,&quot;name&quot;:&quot;&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;}}}}
+13:02:46.048 &lt;&lt; {&quot;id&quot;:3,&quot;result&quot;:{}}
+13:02:46.067 &gt;&gt; {&quot;method&quot;:&quot;Target.setAutoAttach&quot;,&quot;params&quot;:{&quot;autoAttach&quot;:true,&quot;waitForDebuggerOnStart&quot;:false,&quot;flatten&quot;:true},&quot;id&quot;:4}
+13:02:46.071 &lt;&lt; {&quot;id&quot;:4,&quot;result&quot;:{}}
+13:02:46.073 &gt;&gt; {&quot;method&quot;:&quot;Browser.getWindowForTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;},&quot;id&quot;:5}
+13:02:46.076 &lt;&lt; {&quot;id&quot;:5,&quot;result&quot;:{&quot;windowId&quot;:1,&quot;bounds&quot;:{&quot;left&quot;:10,&quot;top&quot;:10,&quot;width&quot;:1050,&quot;height&quot;:708,&quot;windowState&quot;:&quot;normal&quot;}}}
+13:02:46.443 &gt;&gt; {&quot;method&quot;:&quot;Page.navigate&quot;,&quot;params&quot;:{&quot;url&quot;:&quot;https:\/\/webordering-sp-stg.qubeyond.com\/364\/login&quot;},&quot;id&quot;:6}
+13:02:47.444 &lt;&lt; {&quot;id&quot;:6,&quot;result&quot;:{&quot;frameId&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;,&quot;loaderId&quot;:&quot;BE2905E13D939C5FF7A2CAA461361DBF&quot;}}
+13:02:47.448 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{}}
+13:02:47.468 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;}}
+13:02:47.505 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextsCleared&quot;,&quot;params&quot;:{}}
+13:02:47.508 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;,&quot;loaderId&quot;:&quot;BE2905E13D939C5FF7A2CAA461361DBF&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/364/login&quot;,&quot;securityOrigin&quot;:&quot;https://webordering-sp-stg.qubeyond.com&quot;,&quot;mimeType&quot;:&quot;text/html&quot;}}}
+13:02:47.510 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:1,&quot;origin&quot;:&quot;https://webordering-sp-stg.qubeyond.com&quot;,&quot;name&quot;:&quot;&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;}}}}
+13:02:49.305 &lt;&lt; {&quot;method&quot;:&quot;Page.frameAttached&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;D88C986367DDF72B8E1522B1E9109989&quot;,&quot;parentFrameId&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;,&quot;stack&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:1106505},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:1106724},{&quot;functionName&quot;:&quot;pr&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:1108131},{&quot;functionName&quot;:&quot;e.setupOnce&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:1111709},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:1086334},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec ...
+13:02:49.333 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;D88C986367DDF72B8E1522B1E9109989&quot;}}
+13:02:49.338 &lt;&lt; {&quot;method&quot;:&quot;Page.frameNavigated&quot;,&quot;params&quot;:{&quot;frame&quot;:{&quot;id&quot;:&quot;D88C986367DDF72B8E1522B1E9109989&quot;,&quot;parentId&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;,&quot;loaderId&quot;:&quot;8CAFAFC315CAD33E20678A55E8F17248&quot;,&quot;name&quot;:&quot;&quot;,&quot;url&quot;:&quot;about:blank&quot;,&quot;securityOrigin&quot;:&quot;://&quot;,&quot;mimeType&quot;:&quot;text/html&quot;}}}
+13:02:49.341 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextCreated&quot;,&quot;params&quot;:{&quot;context&quot;:{&quot;id&quot;:2,&quot;origin&quot;:&quot;https://webordering-sp-stg.qubeyond.com&quot;,&quot;name&quot;:&quot;&quot;,&quot;auxData&quot;:{&quot;isDefault&quot;:true,&quot;type&quot;:&quot;default&quot;,&quot;frameId&quot;:&quot;D88C986367DDF72B8E1522B1E9109989&quot;}}}}
+13:02:49.343 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;D88C986367DDF72B8E1522B1E9109989&quot;}}
+13:02:49.345 &lt;&lt; {&quot;method&quot;:&quot;Runtime.executionContextDestroyed&quot;,&quot;params&quot;:{&quot;executionContextId&quot;:2}}
+13:02:49.347 &lt;&lt; {&quot;method&quot;:&quot;Page.frameDetached&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;D88C986367DDF72B8E1522B1E9109989&quot;}}
+13:02:49.369 &lt;&lt; {&quot;method&quot;:&quot;Runtime.consoleAPICalled&quot;,&quot;params&quot;:{&quot;type&quot;:&quot;warning&quot;,&quot;args&quot;:[{&quot;type&quot;:&quot;string&quot;,&quot;value&quot;:&quot;Ionic Angular was already initialized. Make sure IonicModule.forRoot() is just called once.&quot;}],&quot;executionContextId&quot;:1,&quot;timestamp&quot;:1.588836769330086e+12,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:1104537},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:1258948},{&quot;functionName&quot;:&quot;e.runInitializers&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:573099},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:585176},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;colu ...
+13:02:49.420 &lt;&lt; {&quot;method&quot;:&quot;Page.domContentEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:1701131.965552}}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief passed">
+  <span class="keyword indention">And</span>
+  <span class="name">waitForUrl('https://webordering-sp-stg.qubeyond.com/364/login')</span>
+  
+  <span class="lead-duration duration">122ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief failed">
+  <span class="keyword indention">When</span>
+  <span class="name">click(loginScreen.buttons.continueAsGuest)</span>
+  
+  <span class="lead-duration duration">3s 085ms</span>
+
+  </div>
+
+        
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-7">
+          <a>com.intuit.karate.exception.KarateException: ExpressHosted.feature:23 - javascript evaluation failed: click(loginScreen.buttons.continueAsGuest), js eval failed twice:document.querySelector(&quot;.highlight-light-button&quot;).click(), error: {&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;TypeError&quot;,&quot;description&quot;:&quot;TypeError: Cannot read property 'click' of null\n    at &lt;anonymous&gt;:1:50&quot;,&quot;objectId&quot;:&quot;{\&quot;injectedScriptId\&quot;:1,\&quot;id\&quot;:3}&quot;}</a>
+      </div>
+      <div id="msg-7" class="collapse collapsable-details  in ">
+        <pre>com.intuit.karate.exception.KarateException: ExpressHosted.feature:23 - javascript evaluation failed: click(loginScreen.buttons.continueAsGuest), js eval failed twice:document.querySelector(&quot;.highlight-light-button&quot;).click(), error: {&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;TypeError&quot;,&quot;description&quot;:&quot;TypeError: Cannot read property 'click' of null\n    at &lt;anonymous&gt;:1:50&quot;,&quot;objectId&quot;:&quot;{\&quot;injectedScriptId\&quot;:1,\&quot;id\&quot;:3}&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-8">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-8" class="collapse collapsable-details">
+        <pre>13:02:49.612 &gt;&gt; {&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;.highlight-light-button\&quot;).click()&quot;,&quot;returnByValue&quot;:true},&quot;id&quot;:7}
+13:02:49.619 &lt;&lt; {&quot;id&quot;:7,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;TypeError&quot;,&quot;description&quot;:&quot;TypeError: Cannot read property 'click' of null\n    at &lt;anonymous&gt;:1:50&quot;,&quot;objectId&quot;:&quot;{\&quot;injectedScriptId\&quot;:1,\&quot;id\&quot;:1}&quot;},&quot;exceptionDetails&quot;:{&quot;exceptionId&quot;:1,&quot;text&quot;:&quot;Uncaught&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:49,&quot;scriptId&quot;:&quot;11&quot;,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:49}]},&quot;exception&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;TypeError&quot;,&quot;description&quot;:&quot;TypeError: Cannot read property 'click' of null\n    at &lt;anonymous&gt;:1:50&quot;,&quot;objectId&quot;:&quot;{\&quot;injectedScriptId\&quot;:1,\&quot;id\&quot;:2}&quot;}}}}
+13:02:49.621 js eval failed once:document.querySelector(&quot;.highlight-light-button&quot;).click(), error: {&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;TypeError&quot;,&quot;description&quot;:&quot;TypeError: Cannot read property 'click' of null\n    at &lt;anonymous&gt;:1:50&quot;,&quot;objectId&quot;:&quot;{\&quot;injectedScriptId\&quot;:1,\&quot;id\&quot;:1}&quot;}
+13:02:50.172 &lt;&lt; {&quot;method&quot;:&quot;Page.loadEventFired&quot;,&quot;params&quot;:{&quot;timestamp&quot;:1701132.711454}}
+13:02:50.180 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;}}
+13:02:50.669 &lt;&lt; {&quot;method&quot;:&quot;Page.navigatedWithinDocument&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/&quot;}}
+13:02:50.672 &lt;&lt; {&quot;method&quot;:&quot;Page.navigatedWithinDocument&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/&quot;}}
+13:02:50.678 &lt;&lt; {&quot;method&quot;:&quot;Page.frameAttached&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;AE6DD7E2F34D79D338AEB0761478303C&quot;,&quot;parentFrameId&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;,&quot;stack&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;e.addGtmToDom&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:336491},{&quot;functionName&quot;:&quot;e.pushTag&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:336595},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:1062007},{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:70310},{&quot;functionName&quot;:&quot;t.__tryOrUnsub&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond.com/main.f6e3b47fe78c2ec4235c.js&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:291693},{&quot;functionName&quot;:&quot;t.next&quot;,&quot;scriptId&quot;:&quot;9&quot;,&quot;url&quot;:&quot;https://webordering-sp-stg.qubeyond. ...
+13:02:50.762 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStartedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;AE6DD7E2F34D79D338AEB0761478303C&quot;}}
+13:02:51.158 &lt;&lt; {&quot;method&quot;:&quot;Target.attachedToTarget&quot;,&quot;params&quot;:{&quot;sessionId&quot;:&quot;1F31946EB49C0639CA28376C7827C659&quot;,&quot;targetInfo&quot;:{&quot;targetId&quot;:&quot;AE6DD7E2F34D79D338AEB0761478303C&quot;,&quot;type&quot;:&quot;iframe&quot;,&quot;title&quot;:&quot;&quot;,&quot;url&quot;:&quot;&quot;,&quot;attached&quot;:true,&quot;browserContextId&quot;:&quot;A7FFDBBB617E207F0682CC332A55B275&quot;},&quot;waitingForDebugger&quot;:false}}
+13:02:51.205 &lt;&lt; {&quot;method&quot;:&quot;Page.frameStoppedLoading&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;AE6DD7E2F34D79D338AEB0761478303C&quot;}}
+13:02:51.207 &lt;&lt; {&quot;method&quot;:&quot;Page.frameDetached&quot;,&quot;params&quot;:{&quot;frameId&quot;:&quot;AE6DD7E2F34D79D338AEB0761478303C&quot;}}
+13:02:52.623 &gt;&gt; {&quot;method&quot;:&quot;Runtime.evaluate&quot;,&quot;params&quot;:{&quot;expression&quot;:&quot;document.querySelector(\&quot;.highlight-light-button\&quot;).click()&quot;,&quot;returnByValue&quot;:true},&quot;id&quot;:8}
+13:02:52.627 &lt;&lt; {&quot;id&quot;:8,&quot;result&quot;:{&quot;result&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;TypeError&quot;,&quot;description&quot;:&quot;TypeError: Cannot read property 'click' of null\n    at &lt;anonymous&gt;:1:50&quot;,&quot;objectId&quot;:&quot;{\&quot;injectedScriptId\&quot;:1,\&quot;id\&quot;:3}&quot;},&quot;exceptionDetails&quot;:{&quot;exceptionId&quot;:2,&quot;text&quot;:&quot;Uncaught&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:49,&quot;scriptId&quot;:&quot;11&quot;,&quot;stackTrace&quot;:{&quot;callFrames&quot;:[{&quot;functionName&quot;:&quot;&quot;,&quot;scriptId&quot;:&quot;11&quot;,&quot;url&quot;:&quot;&quot;,&quot;lineNumber&quot;:0,&quot;columnNumber&quot;:49}]},&quot;exception&quot;:{&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;TypeError&quot;,&quot;description&quot;:&quot;TypeError: Cannot read property 'click' of null\n    at &lt;anonymous&gt;:1:50&quot;,&quot;objectId&quot;:&quot;{\&quot;injectedScriptId\&quot;:1,\&quot;id\&quot;:4}&quot;}}}}
+13:02:52.629 js eval failed twice:document.querySelector(&quot;.highlight-light-button&quot;).click(), error: {&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;TypeError&quot;,&quot;description&quot;:&quot;TypeError: Cannot read property 'click' of null\n    at &lt;anonymous&gt;:1:50&quot;,&quot;objectId&quot;:&quot;{\&quot;injectedScriptId\&quot;:1,\&quot;id\&quot;:3}&quot;}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">waitForUrl('https://webordering-sp-stg.qubeyond.com/364/search-locations')</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(3000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">input(loginScreen.fields.Locationedit, Basket.Address.location)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(20000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">click(locationSearchScreen.fields.selectedItem)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(10000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">click(loginScreen.buttons.search)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(8000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">click(locationSearchScreen.fields.selectedStore)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(5000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">waitForUrl('https://webordering-sp-stg.qubeyond.com/364/menu-category')</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(3000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">click(Menu.Beverage)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">click(Menu.Bottle)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(2000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">click(Menu.AddToBag)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(5000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">click(Menu.BasketIcon)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(3000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">screenshot()</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">click(Menu.CheckoutBtn)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(10000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">select(&quot;//select[@name='dateTime'][2]&quot;, '10:30 AM')</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'https://auth-stg.qubeyond.com/api/v3.5/token'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">request {userName: 'DBAdmin',password: 'DBAdmin1234!'}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">method POST</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def authToken = response.token</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;Access Token: &quot; + authToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def authorizationHeader =  'Bearer ' + authToken</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'https://woapi-stg.qubeyond.com/api/v3.5/order-channels'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">header Authorization = authorizationHeader</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">method GET</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'https://woapi-stg.qubeyond.com/api/v3.5/order-types'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">header Authorization = authorizationHeader</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">method GET</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def orderDateTimeFn =</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-9">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-9" class="collapse collapsable-details">
+        <pre>function() {
+    var SimpleDateFormat = Java.type('java.text.SimpleDateFormat');
+    var JavaDate = Java.type('java.util.Date');
+    var TimeZone = Java.type('java.util.TimeZone');
+    var sdf = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);
+    sdf.setTimeZone(TimeZone.getTimeZone(&quot;UTC&quot;));
+    return sdf.format(new JavaDate());
+		// return temp.toString();
+}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def orderDateTime = call orderDateTimeFn {}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;OrderDateTime: &quot; + orderDateTime</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'https://woapi-stg.qubeyond.com/api/v3.5/basket'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">header Authorization = authorizationHeader</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">request {&quot;orderChannelId&quot;: 314, &quot;orderTypeId&quot;: 234, &quot;locationId&quot;: 260, &quot;orderDateTime&quot;: #(orderDateTime)}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">method POST</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'https://woapi-stg.qubeyond.com/api/v3.5/basket/items'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">header Authorization = authorizationHeader</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">request {&quot;IsFavorite&quot;:false,&quot;menuItemPath&quot;:&quot;9869-12062-12063&quot;,&quot;FavoriteTag&quot;:&quot;&quot;,&quot;note&quot;:&quot;&quot;,&quot;quantity&quot;:1,&quot;basketItems&quot;:[],&quot;portionId&quot;:186}</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">method POST</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">def basketResponse = response</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">print 'BasketResponse:' +basketResponse</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">url 'https://woapi-stg.qubeyond.com/api/v3.5/basket'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">header Authorization = authorizationHeader</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">param orderChannelId = '314'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">param orderTypeId = '234'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">param locationId = '260'</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">method GET</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">status 200</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;STARTS&quot;</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;Amount Due: &quot;+response.amountDue</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;Tips Total: &quot;+response.tipsTotal</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;Tax: &quot; +response.taxesTotal</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def baseAmount = (1 * response.amountDue) - (1 * response.taxesTotal)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print &quot;Base amount: &quot;+baseAmount</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def expSubTot = +baseAmount</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def actSubTot = text(OrderPage.SubTotal).trim()</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def ST = actSubTot.replaceAll(&quot;\\$&quot;,&quot;&quot;)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def subTot = ST | 0</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print subTot</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match subTot == expSubTot</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(20000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def expTax = +response.taxesTotal</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def actTax = text(OrderPage.Tax).trim()</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def TX = actTax.replaceAll(&quot;\\$&quot;,&quot;&quot;)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def tax = parseFloat(TX)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print tax</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match tax == expTax</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(20000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def expOrderTot = +response.amountDue</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def actOT = text(OrderPage.OrderTotal).trim()</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def OT = actOT.replaceAll(&quot;\\$&quot;,&quot;&quot;)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">def OrdTot = parseFloat(OT)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">print OrdTot</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">match OrdTot == expOrderTot</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(10000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">click(Menu.MakePaymentBtn)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(10000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">waitForUrl('https://webordering-sp-stg.qubeyond.com/364/make-payment-screen')</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">click(&quot;//app-make-payment-screen/div/div/div[2]/div[1]/ion-grid/div[2]/ion-row/ion-col[2]/fieldset/div/label/div/div/span[2]&quot;)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(10000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">click(&quot;//app-make-payment-screen/div/div/div[2]/div[1]/ion-grid/div[2]/ion-row[2]/ion-col/ion-row/ion-col/div/fieldset/div/label/div[1]/div/span[2]&quot;)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(20000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">switchFrame('#iframeURLID')</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">input(ExpressHosted.cardnumer, Basket.ExpressHosted.CardNumber)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">select(&quot;//select[@class='selectOption'][1]&quot;, '12')</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Given</span>
+  <span class="name">select(&quot;//select[@class='selectOption'][2]&quot;, '30')</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">When</span>
+  <span class="name">input(ExpressHosted.CVVnumber, Basket.ExpressHosted.CVVNumber)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">click(ExpressHosted.processTrans)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">switchFrame(null)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">delay(10000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">*</span>
+  <span class="name">scroll(Menu.PayNowBtn)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">input(Menu.FnameEdit,Basket.Address.Fname)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">input(Menu.LnameEdit, Basket.Address.Lname)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">input(Menu.MobNum, Basket.Address.Mob)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">input(Menu.Email, Basket.Address.Email)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(10000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">click(Menu.PayNowBtn)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(20000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">Then</span>
+  <span class="name">waitForUrl('https://webordering-sp-dev.qubeyond.com/362/order-confirmation')</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+
+        
+
+        
+  
+      </div>
+          <div class="step">
+        
+<div class="brief skipped">
+  <span class="keyword indention">And</span>
+  <span class="name">delay(20000)</span>
+  
+  <span class="lead-duration duration">000ms</span>
+
+  </div>
+
+        
+
+
+        
+        
+  <div class="inner-level">
+    <div class="docstring indention">
+            <div data-toggle="collapse" class="collapsable-control" data-target="#msg-10">
+          <a>Doc string</a>
+      </div>
+      <div id="msg-10" class="collapse collapsable-details">
+        <pre>13:02:52.634 &gt;&gt; {&quot;method&quot;:&quot;Target.closeTarget&quot;,&quot;params&quot;:{&quot;targetId&quot;:&quot;C0CAC65DB899A56F8F8841BD729BAEA8&quot;},&quot;id&quot;:9}
+13:02:52.750 &lt;&lt; {&quot;id&quot;:9,&quot;result&quot;:{&quot;success&quot;:true}}</pre>
+      </div>
+    </div>
+  </div>
+
+        
+
+        
+  
+      </div>
+      </div>
+</div>
+
+
+    
+
+  </div>
+</div>
+
+                  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-10">
+      <i class="fa fa-chevron-circle-down fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('show')"></i>
+      <i class="fa fa-chevron-circle-up fa-2x collapsable-control"
+        onClick="javascript:$('#report .collapsable-details').collapse('hide')"></i>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

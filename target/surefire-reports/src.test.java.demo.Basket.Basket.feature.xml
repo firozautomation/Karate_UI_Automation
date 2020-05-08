@@ -1,0 +1,114 @@
+<testsuite failures="1" name="src/test/java/demo/Basket/Basket.feature.feature" skipped="0" tests="1" time="196.181461">
+  <testcase classname="src.test.java.demo.Basket.Basket.feature" name="Proceed as Guest" time="196.181461">
+    <failure message="Basket.feature.feature:168 - javascript evaluation failed: click(Menu.OfflinecreditChkbox), js eval failed twice:document.evaluate(&quot;//app-make-payment-screen/div/div/div[2]/div[1]/ion-grid/div[2]/ion-row[1]/ion-col[1]/fieldset/div/label/div/div/span[2]&quot;, document, null, 9, null).singleNodeValue.click(), error: {&quot;type&quot;:&quot;object&quot;,&quot;subtype&quot;:&quot;error&quot;,&quot;className&quot;:&quot;TypeError&quot;,&quot;description&quot;:&quot;TypeError: Cannot read property 'click' of null\n    at &lt;anonymous&gt;:1:183&quot;,&quot;objectId&quot;:&quot;{\&quot;injectedScriptId\&quot;:1,\&quot;id\&quot;:7}&quot;}">* configure driver = { type: 'chrome', showDriverLog: true } .............. passed
+* call read ('../Jsonfiles/BasketDatas.json') ............................. passed
+* call read ('../Jsonfiles/BasketLocators.json') .......................... passed
+Given driver 'https://webordering-sp-dev.qubeyond.com/362/login' .......... passed
+And driver.dimensions = { x: 0, y: 0, width: 1600, height: 1200 } ......... passed
+And waitForUrl('https://webordering-sp-dev.qubeyond.com/362/login') ....... passed
+When click(loginScreen.buttons.continueAsGuest) ........................... passed
+Then waitForUrl('https://webordering-sp-dev.qubeyond.com/362/search-locations') . passed
+And delay(3000) ........................................................... passed
+And input(loginScreen.fields.Locationedit, Basket.Address.location) ....... passed
+And delay(20000) .......................................................... passed
+When click(locationSearchScreen.fields.selectedItem) ...................... passed
+And delay(10000) .......................................................... passed
+When click(loginScreen.buttons.search) .................................... passed
+And delay(8000) ........................................................... passed
+When click(locationSearchScreen.fields.selectedStore) ..................... passed
+And delay(5000) ........................................................... passed
+Then waitForUrl('https://webordering-sp-dev.qubeyond.com/362/menu-category') . passed
+And delay(3000) ........................................................... passed
+When click(Menu.Beverage) ................................................. passed
+Then click(Menu.Bottle) ................................................... passed
+And delay(2000) ........................................................... passed
+And click(Menu.AddToBag) .................................................. passed
+And delay(5000) ........................................................... passed
+And click(Menu.BasketIcon) ................................................ passed
+And delay(3000) ........................................................... passed
+And screenshot() .......................................................... passed
+When click(Menu.CheckoutBtn) .............................................. passed
+And delay(30000) .......................................................... passed
+* scroll(Menu.MakePaymentBtn) ............................................. passed
+Given url 'https://auth-stg.qubeyond.com/api/v3.5/token' .................. passed
+And request {userName: 'DBAdmin',password: 'DBAdmin1234!'} ................ passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* def authToken = response.token .......................................... passed
+* print "Access Token: " + authToken ...................................... passed
+* def authorizationHeader =  'Bearer ' + authToken ........................ passed
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/order-channels' ........ passed
+And header Authorization = authorizationHeader ............................ passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/order-types' ........... passed
+And header Authorization = authorizationHeader ............................ passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* def orderDateTimeFn = ................................................... passed
+* def orderDateTime = call orderDateTimeFn {} ............................. passed
+* print "OrderDateTime: " + orderDateTime ................................. passed
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/basket' ................ passed
+And header Authorization = authorizationHeader ............................ passed
+And request {"orderChannelId": 314, "orderTypeId": 234, "locationId": 260, "orderDateTime": #(orderDateTime)} . passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/basket/items' .......... passed
+And header Authorization = authorizationHeader ............................ passed
+And request {"IsFavorite":false,"menuItemPath":"9869-12062-12063","FavoriteTag":"","note":"","quantity":1,"basketItems":[],"portionId":184} . passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+And def basketResponse = response ......................................... passed
+And print 'BasketResponse:' +basketResponse ............................... passed
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/basket' ................ passed
+And header Authorization = authorizationHeader ............................ passed
+And param orderChannelId = '314' .......................................... passed
+And param orderTypeId = '234' ............................................. passed
+And param locationId = '260' .............................................. passed
+When method GET ........................................................... passed
+Then status 200 ........................................................... passed
+* print "STARTS" .......................................................... passed
+* print "Amount Due: "+response.amountDue ................................. passed
+* print "Tips Total: "+response.tipsTotal ................................. passed
+* print "Tax: " +response.taxesTotal ...................................... passed
+* def baseAmount = (1 * response.amountDue) - (1 * response.taxesTotal) ... passed
+* print "Base amount: "+baseAmount ........................................ passed
+* def expSubTot = +baseAmount ............................................. passed
+* def actSubTot = text(OrderPage.SubTotal).trim() ......................... passed
+* def ST = actSubTot.replaceAll("\\$","") ................................. passed
+* def subTot = ST | 0 ..................................................... passed
+* print subTot ............................................................ passed
+And match subTot == expSubTot ............................................. passed
+And delay(20000) .......................................................... passed
+* def expTax = +response.taxesTotal ....................................... passed
+* def actTax = text(OrderPage.Tax).trim() ................................. passed
+* def TX = actTax.replaceAll("\\$","") .................................... passed
+And match TX == expTax .................................................... passed
+And delay(20000) .......................................................... passed
+* def expOrderTot = +response.amountDue ................................... passed
+* def actOT = text(OrderPage.OrderTotal).trim() ........................... passed
+* def OT = actOT.replaceAll("\\$","") ..................................... passed
+And match OT == expOrderTot ............................................... passed
+And delay(10000) .......................................................... passed
+When click(Menu.MakePaymentBtn) ........................................... passed
+And delay(10000) .......................................................... passed
+Then waitForUrl('https://webordering-sp-dev.qubeyond.com/362/make-payment-screen') . passed
+* click(Menu.OfflinecreditChkbox) ......................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: Basket.feature.feature:168 - javascript evaluation failed: click(Menu.OfflinecreditChkbox), js eval failed twice:document.evaluate("//app-make-payment-screen/div/div/div[2]/div[1]/ion-grid/div[2]/ion-row[1]/ion-col[1]/fieldset/div/label/div/div/span[2]", document, null, 9, null).singleNodeValue.click(), error: {"type":"object","subtype":"error","className":"TypeError","description":"TypeError: Cannot read property 'click' of null\n    at &lt;anonymous&gt;:1:183","objectId":"{\"injectedScriptId\":1,\"id\":7}"}&#13;
+	at ✽.* click(Menu.OfflinecreditChkbox) (Basket.feature.feature:168)&#13;
+
+And delay(10000) .......................................................... skipped
+* scroll(Menu.PayNowBtn) .................................................. skipped
+And input(Menu.FnameEdit,Basket.Address.Fname) ............................ skipped
+And input(Menu.LnameEdit, Basket.Address.Lname) ........................... skipped
+And input(Menu.MobNum, Basket.Address.Mob) ................................ skipped
+And input(Menu.Email, Basket.Address.Email) ............................... skipped
+And delay(10000) .......................................................... skipped
+And click(Menu.PayNowBtn) ................................................. skipped
+And delay(20000) .......................................................... skipped
+Then waitForUrl('https://webordering-sp-dev.qubeyond.com/362/order-confirmation') . skipped
+And delay(20000) .......................................................... skipped</failure>
+  </testcase>
+</testsuite>

@@ -1,0 +1,35 @@
+{
+	"login": {
+		"Data1": {
+			"Username": "",
+			"Password": ""
+		},
+		"Data2": {
+			"Username": "Qubeyond@mailinator.com",
+			"Password": "Qubeyond@1234"
+		},
+		"Data3": {
+			"Username": "senthil1234@mailinator.com",
+			"Password": "Senthil@1234568"
+		},
+		"Data4": {
+			"Username": "XYZ@mailinator.com",
+			"Password": "Senthil@1234"
+		},
+		"Data5": {
+			"Username": "ABC@mailinator.com",
+			"Password": "Abc@1234"
+		},
+		"Data6": {
+			"Username": "senthil1234@mailinator.com",
+			"Password": "Senthil@1234"
+        },
+        "Data7": {
+			"Username_Error": "Email address is required",
+			"Password_Error": "Password is required"
+		},
+		"Locations" :{
+			"Value" : "East West Highway, Bethesda, MD, USA"
+		}
+	}
+}

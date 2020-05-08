@@ -1,0 +1,20 @@
+<testsuite failures="1" name="src/test/java/demo/AccountDelete/CheckDeletedAccount.feature" skipped="0" tests="1" time="11.934318">
+  <testcase classname="src.test.java.demo.AccountDelete.CheckDeletedAccount" name="try to login to spa with delted account credentials" time="11.934318">
+    <failure message="CheckDeletedAccount.feature:18 - driver config / start failed: &#10;org.apache.http.conn.HttpHostConnectException: Connect to localhost:9222 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, options: {type=chrome, showDriverLog=true, target=null}">* configure driver = { type: 'chrome', showDriverLog: true } .............. passed
+* call read ('../Jsonfiles/DeleteAccountData.json') ....................... passed
+* call read ('../Jsonfiles/DeleteAccountLocators.json') ................... passed
+Given driver 'https://webordering-sp-stg.qubeyond.com/364/login' .......... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: CheckDeletedAccount.feature:18 - driver config / start failed: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:9222 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect, options: {type=chrome, showDriverLog=true, target=null}&#13;
+	at ✽.Given driver 'https://webordering-sp-stg.qubeyond.com/364/login' (CheckDeletedAccount.feature:18)&#13;
+
+And delay(10000) .......................................................... skipped
+And input(DeleteAccount.fields.Email,Account.Data.Username) ............... skipped
+And input(DeleteAccount.fields.password,Account.Data.Password) ............ skipped
+When click(DeleteAccount.buttons.login) ................................... skipped
+And delay(10000) .......................................................... skipped
+* print text(ErrorMessage.Errors.PopUpMessage) ............................ skipped</failure>
+  </testcase>
+</testsuite>

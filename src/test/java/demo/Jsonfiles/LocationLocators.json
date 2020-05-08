@@ -1,0 +1,22 @@
+{
+    "LocationScreen": {
+        "fields": {
+            "selectedItem": ".list_body_item",
+            "selectedStore": ".store-selection-store-name",
+            "Nostore":"//p[@class='no-store description-font-sizes']",
+            "PugazhStore": "//div[@class='store-list']/div[2]/div/div[1]/span[1]"
+        },
+        "Editbox": {
+            "StreetAddress": "input[id=location]"
+        },
+        "buttons":{
+            "continueAsGuest": ".highlight-light-button",
+            "search": ".location-Submit-Btn"
+        },
+        "RadioButton": {
+            "Delivery" : "//*[@id='outer-div']/div/div[1]/div[1]/ion-row/fieldset/div[2]/label/div/div[1]/span[2]",
+            "pickup" : "//*[@id='outer-div']/div/div[1]/div[1]/ion-row/fieldset/div[1]/label/div/div/span[2]"
+        }
+    
+    }
+}

@@ -1,0 +1,28 @@
+{
+	"loginScreen": {
+		"buttons": {
+			"continueAsGuest": ".highlight-light-button",
+			"login": ".highlight-dark-button",
+			"search": ".location-Submit-Btn",
+			"popup_close": "//button[text()='close']"
+		},
+		"fields": {
+			"Email": "//input[@id='Email']",
+			"password": "//input[@id='password']",
+			"Location" : "input[id=location]"
+		}
+	},
+	"locationSearchScreen": {
+		"fields": {
+			"selectedItem": ".list_body_item",
+			"selectedStore": ".store-selection-store-name"
+		}
+	},
+	"ErrorMessage": {
+		"Errors": {
+			"EmailValidate": "//span[@id='email-validator']",
+			"PasswordValidate": "//span[@id='password-validator']",
+			"popup_invalidUser": "//div[@class='alert-description-container']/p"
+		}
+	}
+}

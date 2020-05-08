@@ -1,0 +1,18 @@
+<testsuite failures="0" name="src/test/java/demo/Login/Email_Invalid_Pwd_valid.feature" skipped="0" tests="1" time="70.172236">
+  <testcase classname="src.test.java.demo.Login.Email_Invalid_Pwd_valid" name="try to login to spa with Invalid EmailId and Valid Password" time="70.172236">
+    <system-out>* configure driver = { type: 'chrome', showDriverLog: true } .............. passed
+* call read ('../Jsonfiles/LoginDatas.json') .............................. passed
+* call read ('../Jsonfiles/LoginLocators.json') ........................... passed
+Given driver 'https://webordering-sp-dev.qubeyond.com/362/login' .......... passed
+And delay(20000) .......................................................... passed
+And input(loginScreen.fields.Email,login.Data4.Username) .................. passed
+And input(loginScreen.fields.password,login.Data4.Password) ............... passed
+When click(loginScreen.buttons.login) ..................................... passed
+And delay(10000) .......................................................... passed
+* print text(ErrorMessage.Errors.popup_invalidUser) ....................... passed
+And screenshot() .......................................................... passed
+And delay(10000) .......................................................... passed
+When click(loginScreen.buttons.popup_close) ............................... passed
+And delay(10000) .......................................................... passed</system-out>
+  </testcase>
+</testsuite>

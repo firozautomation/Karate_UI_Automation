@@ -1,0 +1,114 @@
+<testsuite failures="1" name="src/test/java/demo/Basket/OfflineCredit.feature" skipped="0" tests="1" time="20.685747">
+  <testcase classname="src.test.java.demo.Basket.OfflineCredit" name="Proceed as Guest" time="20.685747">
+    <failure message="OfflineCredit.feature:16 - failed to get reply for: [id: 6, method: Page.navigate, params: {url=https://webordering-sp-stg.qubeyond.com/364/login}]">* configure driver = { type: 'chrome', showDriverLog: true } .............. passed
+* call read ('../Jsonfiles/BasketDatas.json') ............................. passed
+* call read ('../Jsonfiles/BasketLocators.json') .......................... passed
+Given driver 'https://webordering-sp-stg.qubeyond.com/364/login' .......... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: OfflineCredit.feature:16 - failed to get reply for: [id: 6, method: Page.navigate, params: {url=https://webordering-sp-stg.qubeyond.com/364/login}]&#13;
+	at ✽.Given driver 'https://webordering-sp-stg.qubeyond.com/364/login' (OfflineCredit.feature:16)&#13;
+
+And driver.dimensions = { x: 0, y: 0, width: 1600, height: 1200 } ......... skipped
+And waitForUrl('https://webordering-sp-stg.qubeyond.com/364/login') ....... skipped
+When click(loginScreen.buttons.continueAsGuest) ........................... skipped
+Then waitForUrl('https://webordering-sp-stg.qubeyond.com/364/search-locations') . skipped
+And delay(3000) ........................................................... skipped
+And input(loginScreen.fields.Locationedit, Basket.Address.location) ....... skipped
+And delay(20000) .......................................................... skipped
+When click(locationSearchScreen.fields.selectedItem) ...................... skipped
+And delay(10000) .......................................................... skipped
+When click(loginScreen.buttons.search) .................................... skipped
+And delay(8000) ........................................................... skipped
+When click(locationSearchScreen.fields.selectedStore) ..................... skipped
+And delay(5000) ........................................................... skipped
+Then waitForUrl('https://webordering-sp-stg.qubeyond.com/364/menu-category') . skipped
+And delay(3000) ........................................................... skipped
+When click(Menu.Beverage) ................................................. skipped
+Then click(Menu.Bottle) ................................................... skipped
+And delay(2000) ........................................................... skipped
+And click(Menu.AddToBag) .................................................. skipped
+And delay(5000) ........................................................... skipped
+And click(Menu.BasketIcon) ................................................ skipped
+And delay(3000) ........................................................... skipped
+And screenshot() .......................................................... skipped
+When click(Menu.CheckoutBtn) .............................................. skipped
+And delay(30000) .......................................................... skipped
+* scroll(Menu.MakePaymentBtn) ............................................. skipped
+Given url 'https://auth-stg.qubeyond.com/api/v3.5/token' .................. skipped
+And request {userName: 'DBAdmin',password: 'DBAdmin1234!'} ................ skipped
+When method POST .......................................................... skipped
+Then status 200 ........................................................... skipped
+* def authToken = response.token .......................................... skipped
+* print "Access Token: " + authToken ...................................... skipped
+* def authorizationHeader =  'Bearer ' + authToken ........................ skipped
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/order-channels' ........ skipped
+And header Authorization = authorizationHeader ............................ skipped
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/order-types' ........... skipped
+And header Authorization = authorizationHeader ............................ skipped
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped
+* def orderDateTimeFn = ................................................... skipped
+* def orderDateTime = call orderDateTimeFn {} ............................. skipped
+* print "OrderDateTime: " + orderDateTime ................................. skipped
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/basket' ................ skipped
+And header Authorization = authorizationHeader ............................ skipped
+And request {"orderChannelId": 314, "orderTypeId": 234, "locationId": 260, "orderDateTime": #(orderDateTime)} . skipped
+When method POST .......................................................... skipped
+Then status 200 ........................................................... skipped
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/basket/items' .......... skipped
+And header Authorization = authorizationHeader ............................ skipped
+And request {"IsFavorite":false,"menuItemPath":"9869-12062-12063","FavoriteTag":"","note":"","quantity":1,"basketItems":[],"portionId":186} . skipped
+When method POST .......................................................... skipped
+Then status 200 ........................................................... skipped
+And def basketResponse = response ......................................... skipped
+And print 'BasketResponse:' +basketResponse ............................... skipped
+Given url 'https://woapi-stg.qubeyond.com/api/v3.5/basket' ................ skipped
+And header Authorization = authorizationHeader ............................ skipped
+And param orderChannelId = '314' .......................................... skipped
+And param orderTypeId = '234' ............................................. skipped
+And param locationId = '260' .............................................. skipped
+When method GET ........................................................... skipped
+Then status 200 ........................................................... skipped
+* print "STARTS" .......................................................... skipped
+* print "Amount Due: "+response.amountDue ................................. skipped
+* print "Tips Total: "+response.tipsTotal ................................. skipped
+* print "Tax: " +response.taxesTotal ...................................... skipped
+* def baseAmount = (1 * response.amountDue) - (1 * response.taxesTotal) ... skipped
+* print "Base amount: "+baseAmount ........................................ skipped
+* def expSubTot = +baseAmount ............................................. skipped
+* def actSubTot = text(OrderPage.SubTotal).trim() ......................... skipped
+* def ST = actSubTot.replaceAll("\\$","") ................................. skipped
+* def subTot = ST | 0 ..................................................... skipped
+* print subTot ............................................................ skipped
+And match subTot == expSubTot ............................................. skipped
+And delay(20000) .......................................................... skipped
+* def expTax = +response.taxesTotal ....................................... skipped
+* def actTax = text(OrderPage.Tax).trim() ................................. skipped
+* def TX = actTax.replaceAll("\\$","") .................................... skipped
+And match TX == expTax .................................................... skipped
+And delay(20000) .......................................................... skipped
+* def expOrderTot = +response.amountDue ................................... skipped
+* def actOT = text(OrderPage.OrderTotal).trim() ........................... skipped
+* def OT = actOT.replaceAll("\\$","") ..................................... skipped
+And match OT == expOrderTot ............................................... skipped
+And delay(10000) .......................................................... skipped
+When click(Menu.MakePaymentBtn) ........................................... skipped
+And delay(10000) .......................................................... skipped
+Then waitForUrl('https://webordering-sp-stg.qubeyond.com/364/make-payment-screen') . skipped
+* click(Menu.OfflinecreditChkbox) ......................................... skipped
+And delay(10000) .......................................................... skipped
+* scroll(Menu.PayNowBtn) .................................................. skipped
+And input(Menu.FnameEdit,Basket.Address.Fname) ............................ skipped
+And input(Menu.LnameEdit, Basket.Address.Lname) ........................... skipped
+And input(Menu.MobNum, Basket.Address.Mob) ................................ skipped
+And input(Menu.Email, Basket.Address.Email) ............................... skipped
+And delay(10000) .......................................................... skipped
+And click(Menu.PayNowBtn) ................................................. skipped
+And delay(20000) .......................................................... skipped
+Then waitForUrl('https://webordering-sp-stg.qubeyond.com/364/order-confirmation') . skipped
+And delay(20000) .......................................................... skipped</failure>
+  </testcase>
+</testsuite>

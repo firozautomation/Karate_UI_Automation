@@ -1,0 +1,25 @@
+{
+	"SignUp": {
+		"Fields": {
+            "FirstName": "Satik",
+            "LastName": "Pradhan",
+            "EmailAddress": "qubeyond@mailinator.com",
+            "Password": "Qubeyond@123456",
+            "MobileNumber": "1236987587",
+            "Mobilenumber1" :"123645",
+            "ExistingEmailid" : "senthil1234@mailinator.com",
+            "PasswordCharacter" : "ab@12"
+            
+        },
+        "Validation": {
+            "FNameError": "First name is required",
+            "MobileError": "Mobile number is required",
+            "ValidMobileNumber" : "Please enter valid mobile number",
+            "PopupText" :  "User already exists.",
+            "Validemailaddress" : "Please enter a valid email address",
+            "RequiredEmailaddress" : "Email address is required",
+            "InvalidPassword" : "Password should be atleast 6 characters"
+        }
+       
+	}
+}

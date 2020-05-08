@@ -1,0 +1,44 @@
+{
+	"loginScreen": {
+		"buttons": {
+			"continueAsGuest": ".highlight-light-button",
+			"login": ".highlight-dark-button",
+			"search": ".location-Submit-Btn"
+		},
+		"fields": {
+			"Locationedit": "input[id=location]"
+		}
+	},
+	"locationSearchScreen": {
+		"fields": {
+			"selectedItem": ".list_body_item",
+			"selectedStore": ".store-selection-store-name"
+		}
+	},
+	"Menu": {
+		"Beverage": "//*[@id='contentStarting-5']/div/div[1]",
+		"Bottle": "//div[@role='menuitem']",
+		"AddToBag": "//*[@id='custom-footer']/ion-grid/ion-row/ion-col[2]/div/ion-row/ion-col[2]/div/button[2]",
+		"BasketIcon": "//div[@class='menu-inner-container']/div[1]",
+		"CheckoutBtn": "//button[@id='checkout']",
+		"MakePaymentBtn": "//div[@class='review-order-buttons']/button[2]",
+		"OfflinecreditChkbox": "//app-make-payment-screen/div/div/div[2]/div[1]/ion-grid/div[2]/ion-row[1]/ion-col[1]/fieldset/div/label/div/div/span[2]",
+		"PayNowBtn": "//button[contains(text(),'Pay Now')]",
+		"FnameEdit": "//input[@id='firstname']",
+		"LnameEdit": "//input[@id='lastname']",
+		"MobNum": "//input[@id='mobNum']",
+		"Email": "//input[@id='email']"
+	},
+	"ExpressHosted": {
+		"cardnumer": "//input[@id='cardNumber']",
+		"CVVnumber": "//input[@id='CVV']",
+		"ExpMonth": "//select[@class='selectOption'][1]",
+		"ExpYear": "//select[@class='selectOption'][2]",
+		"processTrans": "//a[@class='buttonEmbedded']"
+	},
+	"OrderPage": {
+		"SubTotal": "//app-review-order-details[@class='ng-star-inserted']/div/div/div[2]/div[3]/ion-grid/ion-row[1]/ion-col[2]/p",
+		"Tax": "//app-review-order-details[@class='ng-star-inserted']/div/div/div[2]/div[3]/ion-grid/ion-row[3]/ion-col[2]/p",
+		"OrderTotal": "//app-review-order-details[@class='ng-star-inserted']/div/div/div[2]/div[3]/ion-grid/ion-row[4]/ion-col[2]/p"
+	}
+}

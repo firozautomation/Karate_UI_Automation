@@ -1,0 +1,22 @@
+{
+	"SignUpscreen": {
+		"RequiredFields": {
+			"FirstName": "//span[@id='firstNameText']",
+			"MobileNumber": "//span[@id='phone']",
+			"PopUpText": "//div[@class='alert-description-container']/p",
+			"ValidEmailAddress": "//span[@id='emailAddr']",
+			"PasswordCharacter": "//span[@id='passwordText']"
+		},
+		"Editboxfields": {
+			"Firstname": "//input[@id='firstname']",
+			"Lastname": "//input[@id='lastname']",
+			"email": "//input[@id='email']",
+			"password": "//input[@id='password']",
+			"Mobilenum": "//input[@id='mobileNum']"
+		},
+		"buttons": {
+			"Create": "//button[contains(text(),'CREATE')]",
+			"popup_close": "//button[text()='close']"
+		}
+	}
+}

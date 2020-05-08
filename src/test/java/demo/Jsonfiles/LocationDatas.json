@@ -1,0 +1,11 @@
+{
+    "Locations": {
+        "Address": {
+            "Country": "East West Highway, Bethesda, MD, USA",
+            "Invalid" : "Haring Hall, Davis, CA, USA",
+            "NoStore" : " Sorry, there appear to be no locations.. ",
+            "Pugazhstore" : "Pugazh store"
+            
+        }
+    }
+}
